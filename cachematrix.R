@@ -1,34 +1,52 @@
-## My function creates a special “matrix” object that can cache its inverse and computes the ##inverse of the special "matrix" returned by makeCacheMatrix function.
+## My function creates a special “matrix” object that can cache its inverse and computes the inverse of the special "matrix" returned by makeCacheMatrix function.
 
-
-## Write a short comment describing this function
-This function creates the special”matrix”object
+##This function creates the special ”matrix” object called 
+## makeCacheMatrix.
 
 makeCacheMatrix <- function(x = matrix()) {
-m<-NULL
-set<-function(y){
-x<<-y
-m<<-NULL
-}
-get<-function()x
-setsolve<-function(solve)m<<-solve
-getsolve<-function()m
-matrix(set=set, get=get,setsolve=setsolve,getsolve=getsolve)
+  
+  i<-NULL
+   
+     set<-function(y){
+      
+          x<<-y
+       
+               i<<-NULL
+ 
 }
 
-## Write a short comment describing this function
-##This function calculates the inverse of the special "matrix" created with the above function
+get<-function()x
+    
+  setsolve<-function(solve)i<<-solve
+        
+          getsolve<-function()i
+            
+            matrix(set=set, get=get,setsolve=setsolve,getsolve=getsolve)
+ 
+}
+
+
+##This function calculates the inverse of the special "matrix" created
+ ##by the above function 
 
 cacheSolve <- function(x, ...) {
-  m<-x$getsolve()
-    if(is.null(m)){
-        message("getting cached data")
- return(m)
+  
+      i<-x$getsolve()
+        
+          if(is.null(i)){
+            
+              message("getting cached data")
+
+ return(i)
+
 }
+## This is part of the function that returns the calculated inverse
 
 data<-x$get()
-   m<-solve(data,...)
- x$setsolve(m)
-m
+     
+       i<-solve(data,...)
+ 
+           x$setsolve(i)
+i
 
 }
