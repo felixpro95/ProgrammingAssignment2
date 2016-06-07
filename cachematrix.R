@@ -1,4 +1,5 @@
-## My function creates a special “matrix” object that can cache its ##inverse and computes the inverse of the special "matrix" returned by ##makeCacheMatrix function.
+## My function creates a special “matrix” object that can cache its inverse. 
+##it computes the inverse of the special "matrix" returned by     ##makeCacheMatrix function.
 
 ##This function creates the special ”matrix” object called 
 ## makeCacheMatrix.
